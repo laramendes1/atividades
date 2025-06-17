@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora Básica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #fda9e4;
+    }
+
+    .container {
+      background-color: #ffcff1;
+      display: inline-block;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    input {
+      padding: 10px;
+      margin: 5px;
+      width: 100px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #resultado {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Calculadora Básica</h2>
+    <input type="number" id="primeiroNumero" placeholder="primeiro número">
+    <input type="number" id="segundoNumero" placeholder="segundo número"><br>
+    <button onclick="somar()">Somar</button>
+    <button onclick="subtrair()">Subtrair</button>
+    <div id="resultado">O resultado é: </div>
+  </div>
+
+  <script>
+    function somar() {
+      let valor1 = parseFloat(document.getElementById("primeiroNumero").value);
+      let valor2 = parseFloat(document.getElementById("segundoNumero").value);
+      let resultadoFinal = valor1 + valor2;
+      document.getElementById("resultado").innerText = "Resultado: " + resultadoFinal;
+    }
+
+    function subtrair() {
+      let valor1 = parseFloat(document.getElementById("primeiroNumero").value);
+      let valor2 = parseFloat(document.getElementById("segundoNumero").value);
+      let resultadoFinal = valor1 - valor2;
+      document.getElementById("resultado").innerText = "Resultado: " + resultadoFinal;
+    }
+  </script>
+</body>
+</html>
