@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>OnPies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .navbar-custom {
+      background-color: #117000;
+      padding: 10px 20px;
+    }
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+      color: white !important;
+      font-weight: 600;
+    }
+
+    .navbar-custom .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 4px;
+    }
+
+    .form-control {
+      border-radius: 4px;
+    }
+
+    .btn-custom {
+      background-color: #4bca75;
+      color: white;
+      font-weight: 600;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
+
+    .btn-custom:hover {
+      background-color: #4bca75;
+    }
+
+    .table-custom {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-size: 1.5rem;
+      background-color: #c7de8a;
+    }
+
+    .table-custom thead {
+      background-color: #117000;
+      color: white;
+      text-align: center;
+    }
+
+    .table-custom tbody td:not(:has(img)) {
+      color: white;
+      text-align: center;
+      padding: 5px 20px;
+    }
+
+    .list-group-item {
+      background-color: #c7de8a;
+      color: #000;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #117000;
+      color: white;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-custom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#" style="font-family:Shamson Signature;">OnPies</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link" href="#Inicio">Início</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Produtos">Produtos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Categorias">Categorias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Contato">Contato</a></li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+        <button class="btn btn-custom" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center mt-4">
+  <h1 class="display-5" style="font-family:Oswald;">Bem-vindo; venha garantir seu Piece of the Pie!</h1>
+  <img src="https://s2-receitas.glbimg.com/rivw1t6Al9BsfodK1AY186hiF9E=/0x0:1080x608/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2022/0/1/x0YvBkTTaAlyCYfAEKSg/capa-materia-gshow-2022-01-25t132009.209.png" 
+       class="img-fluid rounded-4 mt-3" alt="Imagem principal">
+</div>
+
+<div class="container mt-5" id="Categorias">
+  <h2 class="mb-3">Categorias</h2>
+  <ul class="list-group list-group-horizontal-md">
+    <li class="list-group-item flex-fill text-center">Mousse</li>
+    <li class="list-group-item flex-fill text-center">Ingredientes</li>
+    <li class="list-group-item flex-fill text-center">Massa</li>
+  </ul>
+</div>
+
+<div class="container mt-5" id="Produtos">
+  <h2 class="mb-3">Nossas Tortas</h2>
+  <table class="table table-bordered table-custom">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Valor</th>
+        <th>Imagem</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Torta de Limão</td>
+        <td>R$ 38,00</td>
+        <td><img src="https://img.band.com.br/image/2023/05/29/torta-de-limao-184350.jpg" class="img-thumbnail" width="200" height="200"></td>
+      </tr>
+      <tr>
+        <td>Torta de Maracujá</td>
+        <td>R$ 35,00</td>
+        <td><img src="https://suavesabor.com.br/wp-content/uploads/2023/12/211.png" class="img-thumbnail" width="200" height="200"></td>
+      </tr>
+      <tr>
+        <td>Torta de Bombom</td>
+        <td>R$ 32,00</td>
+        <td><img src="https://www.sabornamesa.com.br/media/k2/items/cache/99d2a86172cee13c9812af5a1accf7cc_XL.jpg" class="img-thumbnail" width="200" height="200"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="container mt-5" id="Contato">
+  <h2>Fale Conosco</h2>
+  <form class="row g-3 mt-2">
+    <div class="col-md-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome">
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email">
+    </div>
+    <div class="col-12">
+      <label for="assunto" class="form-label">Assunto</label>
+      <input type="text" class="form-control" id="assunto">
+    </div>
+    <div class="col-12">
+      <label for="mensagem" class="form-label">Mensagem</label>
+      <textarea class="form-control" id="mensagem" rows="4"></textarea>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-custom">Enviar</button>
+    </div>
+  </form>
+</div>
+
+<footer class="text-center mt-5">
+  <h5>Redes sociais</h5>
+  <a href="https://www.instagram.com" class="btn btn-outline-light m-1">Instagram</a>
+  <a href="https://www.facebook.com" class="btn btn-outline-light m-1">Facebook</a>
+  <p class="mt-3 mb-0">2025 - Todos os direitos deste site são assegurados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
